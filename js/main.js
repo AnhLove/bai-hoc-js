@@ -237,7 +237,7 @@ console.log(myString.indexOf('JS'));*/
 /*var myString = 'Hoc JS tai F8!';
 console.log(myString.slice(4))*/
 
-// Replace : thay the 
+// Replace : thay the
 /*var myString = 'Hoc JS tai F8!';
 console.log(myString.replace('JS', 'Javascript'));
 /JS/g : thay the tat ca JS*/
@@ -247,7 +247,7 @@ console.log(myString.replace('JS', 'Javascript'));
 console.log(myString.toUpperCase());*/
 // Convert to lower case : chuyen doi tat ca thanh chu thuong
 
-// Trim : loai bo khoang trang 
+// Trim : loai bo khoang trang
 /* console.log(myString.trim())*/
 
 // Split : tim diem chung de chuyen thanh array
@@ -279,7 +279,6 @@ var result = 20 / 1;
 
 console.log(result)
 console.log(PI.toFixed(0))*/
-
 
 //kiem tra NaN  console.log(isNaN(result))
 
@@ -347,7 +346,6 @@ console.log(languages) //xoa vi tri bat ky trong array , co the them 1 element b
 
 showDialog();*/
 
-
 // Tham số JS
 
 /*function writelog(message, message2) { //day la tham so trong function
@@ -366,8 +364,7 @@ writelog('Test', 'Test_2');*/ // doi so trong write
 // co the truyen moi KDL
 //dinh nghia ra 1 tham so
 
-
-//Return trong ham 
+//Return trong ham
 
 /*var isConfirm = confirm('Message?');
 
@@ -382,14 +379,15 @@ var result = cong(2, 8);
 console.log(result)
 */
 
-function showMessage() { // trung ten thi no show cai sau cung
+/*function showMessage() {
+  // trung ten thi no show cai sau cung
   function showMessage2() {
-    console.log('Message 2');
+    console.log("Message 2");
   }
   showMessage2();
 }
 
-showMessage();
+showMessage();*/
 
 /*
     CaC loai function
@@ -399,33 +397,56 @@ showMessage();
     3. Arrow function
 */
 
-
 // Object trong JS
 
-var myInfo = {
-    name: 'Tuan Anh',
-    age: 18,
-    address: 'Ha Noi, VN',
-    [myKey] : 'Anhlove15',
-    getName: function() { // dat 1 function trong ob
-      return this.address; //this chinh la bien myInfo
-    }
+/*var myInfo = {
+  name: "Tuan Anh",
+  age: 18,
+  address: "Ha Noi, VN",
+  [myKey]: "Anhlove15",
+  getName: function () {
+    // dat 1 function trong ob
+    return this.address; //this chinh la bien myInfo
+  },
 };
 
-var myKey = 'name1' // 1 key moi goi value trong key khac
+var myKey = "name1"; // 1 key moi goi value trong key khac
 
-delete myInfo.age;// xoa value
+delete myInfo.age; // xoa value
 
-myInfo['my-email'] = 'tuankaito5006@gmail.com';// them 1 value ngoai object
-console.log(myInfo.getName());
+myInfo["my-email"] = "tuankaito5006@gmail.com"; // them 1 value ngoai object
+console.log(myInfo.getName());*/
 
 //function --> Phuong thuc / method
 //others --> thuoc tinh / property
 
+// Object constructor
 
+function User(firstName, lastName, avatar) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.avatar = avatar;
 
+    this.getName = function() {
+      return `${this.firstName} ${this.lastName}`
+    }
+}
 
- 
+User.prototype.className = 'Linh';//prototype co the them thuoc tinh o ngoai
+User.prototype.Name = 'Linh1';
+User.prototype.getClassName = function() {
+  return this.Name;
+}
 
+var author = new User('Tuan', 'Anh', 'Avatar');
+var user = new User('Lan', 'Trinh', 'Avatar');
+var user2 = new User('Khanh', 'Van', 'Avatar');
 
- 
+author.title = "Chia se dao tai FB";
+user.comment = "Lieu co on ko vay";
+
+console.log(user.className);
+console.log(user2.getClassName());
+
+// Object prototype - Basic
+
