@@ -197,8 +197,8 @@ Kieu DL trong javascript
 // phep so sanh luon tra ve bolean
 // Toan tu logical luon tra tai ve cua no
 
-var a = 1;
-var b = 2;
+/*var a = 1;
+var b = 2;*/
 
 // var result = "A" && "B" && "C"; // gia tri nao false se return
 // var result = "A" || "B" || "C"; // gia tri nao true se return
@@ -422,7 +422,7 @@ console.log(myInfo.getName());*/
 
 // Object constructor
 
-function User(firstName, lastName, avatar) {
+/*function User(firstName, lastName, avatar) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.avatar = avatar;
@@ -430,9 +430,9 @@ function User(firstName, lastName, avatar) {
     this.getName = function() {
       return `${this.firstName} ${this.lastName}`
     }
-}
-
-User.prototype.className = 'Linh';//prototype co the them thuoc tinh o ngoai
+}*/
+// Object prototype - Basic
+/*User.prototype.className = 'Linh';//prototype co the them thuoc tinh o ngoai
 User.prototype.Name = 'Linh1';
 User.prototype.getClassName = function() {
   return this.Name;
@@ -446,7 +446,15 @@ author.title = "Chia se dao tai FB";
 user.comment = "Lieu co on ko vay";
 
 console.log(user.className);
-console.log(user2.getClassName());
+console.log(user2.getClassName());*/
 
-// Object prototype - Basic
+// đối tượng Date
+
+var date = new Date();
+var month = date.getMonth() + 1;
+var year = date.getFullYear();
+var day = date.getDate();
+
+console.log(`${day}/${month}/${year}`);
+//developer.mozilla.org
 
