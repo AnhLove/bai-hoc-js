@@ -450,11 +450,47 @@ console.log(user2.getClassName());*/
 
 // đối tượng Date
 
-var date = new Date();
+/*var date = new Date();
 var month = date.getMonth() + 1;
 var year = date.getFullYear();
 var day = date.getDate();
 
-console.log(`${day}/${month}/${year}`);
+console.log(`${day}/${month}/${year}`);*/
 //developer.mozilla.org
+
+
+// cau lenh re nhanh - if else
+// var date = 9;
+
+// if (date == 2) {
+//    console.log('hom nay la thu 2');
+// } else if (date == 3) {
+//   console.log('hom nay la thu 3');
+// } else {
+//   console.log('ko biet')
+// }
+
+
+// toan tu 3 ngoi - ternary operator
+
+var course = {
+    name: 'Javascript',
+    coin: 250
+}
+
+// if (course.coin > 260) {
+//     console.log(`${course.coin} Coin`);
+// } else {
+//     console.log('Mien phi');
+// }
+
+var result = course.coin > 0 ? `${course.coin} Coin` : 'Mien phi';
+console.log(result);
+
+var a = 1;
+var b = -2;
+
+var c = a < 0 ? a : b ;
+
+console.log(c);
 
