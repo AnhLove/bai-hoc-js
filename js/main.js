@@ -484,13 +484,36 @@ var course = {
 //     console.log('Mien phi');
 // }
 
-var result = course.coin > 0 ? `${course.coin} Coin` : 'Mien phi';
-console.log(result);
+// var result = course.coin > 0 ? `${course.coin} Coin` : 'Mien phi';
+// console.log(result);
 
-var a = 1;
-var b = -2;
+// var a = 1;
+// var b = -2;
 
-var c = a < 0 ? a : b ;
+// var c = a < 0 ? a : b ;
 
-console.log(c);
+// console.log(c);
+
+/* Vong lap - Loop
+
+1. for - lap vs dk dung
+2. for/in - lap qua key doi tuong
+3. for/of - lap qua value cua ob
+4.while - lap khi dieu kien dung
+5.do/while - lap it nhat 1 lan, sau do lap lai dk dung
+
+*/
+
+var myArray = [
+  'Javascript',
+  'PHP',
+  'Java',
+  'Dart'
+];
+
+var arrayLength = myArray.length;
+
+for (var i = 0; i < arrayLength; i++ ){
+  console.log(myArray[i]);
+}
 
