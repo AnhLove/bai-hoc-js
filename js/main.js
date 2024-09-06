@@ -504,16 +504,32 @@ var course = {
 
 */
 
-var myArray = [
-  'Javascript',
-  'PHP',
-  'Java',
-  'Dart'
-];
+// var myArray = [
+//   'Javascript',
+//   'PHP',
+//   'Java',
+//   'Dart'
+// ];
 
-var arrayLength = myArray.length;
+// var arrayLength = myArray.length;
 
-for (var i = 0; i < arrayLength; i++ ){
-  console.log(myArray[i]);
-}
+// for (var i = 0; i < arrayLength; i++ ){
+//   console.log(myArray[i]);
+// }
 
+var myInfo = {
+    name: 'Tuan Anh',
+    age: 20,
+    address: 'Ha Noi, VN'
+};
+
+for (var key in myInfo) {
+    console.log(myInfo[key]);
+};
+
+var myString = 'Javascript';
+
+
+for (var key in myString) {
+   console.log(myString[key]);
+};
