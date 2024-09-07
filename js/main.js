@@ -496,14 +496,12 @@ var course = {
 
 /* Vong lap - Loop
 
-1. for - lap vs dk dung
-2. for/in - lap qua key doi tuong
-3. for/of - lap qua value cua ob
+
 4.while - lap khi dieu kien dung
 5.do/while - lap it nhat 1 lan, sau do lap lai dk dung
 
 */
-
+//1. for - lap vs dk dung
 // var myArray = [
 //   'Javascript',
 //   'PHP',
@@ -517,19 +515,40 @@ var course = {
 //   console.log(myArray[i]);
 // }
 
+
+//2. for/in - lap qua key doi tuong
+// var myInfo = {
+//     name: 'Tuan Anh',
+//     age: 20,
+//     address: 'Ha Noi, VN'
+// };
+
+// for (var key in myInfo) { 
+//     console.log(myInfo[key]);
+// };
+
+// var myString = 'Javascript';
+
+
+// for (var key in myString) {
+//    console.log(myString[key]);
+// };
+
+
+//3. for/of - lap qua value cua ob
+
+var language = 'Java';
+
+for (var value of language) {
+    console.log(value);
+}
+
 var myInfo = {
-    name: 'Tuan Anh',
-    age: 20,
-    address: 'Ha Noi, VN'
+  name: 'Tuan Anh',
+  age: 20,
+  address: 'Ha Noi, VN'
 };
 
-for (var key in myInfo) {
-    console.log(myInfo[key]);
-};
-
-var myString = 'Javascript';
-
-
-for (var key in myString) {
-   console.log(myString[key]);
-};
+for (var value of Object.keys(myInfo)){
+    console.log(myInfo[value]);
+}
