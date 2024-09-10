@@ -497,7 +497,7 @@ var course = {
 /* Vong lap - Loop
 
 
-4.while - lap khi dieu kien dung
+
 5.do/while - lap it nhat 1 lan, sau do lap lai dk dung
 
 */
@@ -537,18 +537,32 @@ var course = {
 
 //3. for/of - lap qua value cua ob
 
-var language = 'Java';
+// var language = 'Java';
 
-for (var value of language) {
-    console.log(value);
-}
+// for (var value of language) {
+//     console.log(value);
+// }
 
-var myInfo = {
-  name: 'Tuan Anh',
-  age: 20,
-  address: 'Ha Noi, VN'
-};
+// var myInfo = {
+//   name: 'Tuan Anh',
+//   age: 20,
+//   address: 'Ha Noi, VN'
+// };
 
-for (var value of Object.keys(myInfo)){
-    console.log(myInfo[value]);
+// for (var value of Object.keys(myInfo)){
+//     console.log(myInfo[value]);
+// }
+
+//while - lap khi dieu kien dung
+var myArray = [
+  'Javascript',
+  'PHP',
+  'Java',
+  'CSS'
+];
+
+var i = 0;
+while (i < myArray.length) {
+  console.log(myArray[i]);
+  i++;
 }
