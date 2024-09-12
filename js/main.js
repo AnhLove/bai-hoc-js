@@ -496,10 +496,6 @@ var course = {
 
 /* Vong lap - Loop
 
-
-
-5.do/while - lap it nhat 1 lan, sau do lap lai dk dung
-
 */
 //1. for - lap vs dk dung
 // var myArray = [
@@ -553,16 +549,33 @@ var course = {
 //     console.log(myInfo[value]);
 // }
 
-//while - lap khi dieu kien dung
-var myArray = [
-  'Javascript',
-  'PHP',
-  'Java',
-  'CSS'
-];
+//4.while - lap khi dieu kien dung
+// var myArray = [
+//   'Javascript',
+//   'PHP',
+//   'Java',
+//   'CSS'
+// ];
+
+// var i = 0;
+// while (i < myArray.length) {
+//   console.log(myArray[i]);
+//   i++;
+// }
+
+//5.do/while - lap it nhat 1 lan, sau do lap lai dk dung
 
 var i = 0;
-while (i < myArray.length) {
-  console.log(myArray[i]);
+var isSuccess = false;
+
+do{
   i++;
-}
+
+  console.log('Nap the lan '  + i);
+
+  //VD nap the 
+  if (false){
+    isSuccess =true;
+  }
+
+}while (!isSuccess && i <= 3);
