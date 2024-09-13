@@ -565,17 +565,44 @@ var course = {
 
 //5.do/while - lap it nhat 1 lan, sau do lap lai dk dung
 
-var i = 0;
-var isSuccess = false;
+// var i = 0;
+// var isSuccess = false;
 
-do{
-  i++;
+// do{
+//   i++;
 
-  console.log('Nap the lan '  + i);
+//   console.log('Nap the lan '  + i);
 
-  //VD nap the 
-  if (false){
-    isSuccess =true;
+//   //VD nap the 
+//   if (false){
+//     isSuccess =true;
+//   }
+
+// }while (!isSuccess && i <= 3);
+
+
+//BREAK & Continue
+
+// for (var i = 0; i < 10; i++){
+//   if (i % 2 != 0 ){
+//     continue;
+//   }
+  
+//   console.log(i);
+  
+// }
+
+// Vong lap lồng nhau
+
+var myArray = [
+  [1, 2],
+  [3, 4],
+  [5, 6]
+];
+
+for (var i = 0; i < myArray.length; i++) {
+  for (var j = 0; j < myArray[i].length; j++){
+    console.log(myArray[i][j]);
   }
-
-}while (!isSuccess && i <= 3);
+  
+}
