@@ -609,6 +609,71 @@ var course = {
 
 // Loop...
 
-for (var i = 100; i > 0; i -= 5 ) {
-  console.log(i);
-}
+// for (var i = 100; i > 0; i -= 5 ) {
+//   console.log(i);
+// }
+
+/* Array methods:
+    forEach()
+    courses.forEach(function(course) {
+  console.log(course);
+});// call back
+    
+every() // tra ve bolean true or false
+    var isFree = courses.every(function(course) {
+  return course.coin == 0;
+});// call back
+console.log(isFree);
+    
+some() // chi can 1 dk dung
+    
+    find() // tim dc 1
+    var course = courses.find(function(course) {
+  return course.name == 'Ruby';
+});
+console.log(course);
+    
+filter()// tim dc nhieu 
+    var course = courses.filter(function(course) {
+  return course.name == 'Ruby';
+});
+console.log(course);
+
+map()
+    
+reduce()
+*/
+
+var courses = [
+    {
+      id: 1,
+      name: 'javascript',
+      coin: 250
+    },
+    {
+      id: 2,
+      name: 'HTML, CSS',
+      coin:0
+    },
+    {
+      id: 3,
+      name: 'Ruby',
+      coin: 0
+    },
+    {
+      id: 4,
+      name: 'PHP',
+      coin: 400
+    },
+    {
+      id: 5,
+      name: 'ReactJS',
+      coin: 500
+    } ,
+    {
+      id: 6,
+      name: 'Ruby',
+      coin: 10
+    },
+];
+
