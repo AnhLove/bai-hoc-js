@@ -677,3 +677,18 @@ var courses = [
     },
 ];
 
+function courseHandler(course, index, orginArray) {
+  return {
+    id: course.id,
+    name: `Khoa hoc: ${course.name}`,
+    coin: course.coin,
+    coinText:` Gia: ${course.coin}`,
+    index: index,
+    orginArray: orginArray, //tra ve gia tri return de them dl moi
+  };
+}
+
+var newCourses = courses.map(courseHandler);
+
+console.log(newCourses);
+
