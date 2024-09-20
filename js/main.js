@@ -639,8 +639,26 @@ filter()// tim dc nhieu
 });
 console.log(course);
 
+
+
 map()
+function courseHandler(course, index, orginArray) {
+  return {
+    id: course.id,
+    name: `Khoa hoc: ${course.name}`,
+    coin: course.coin,
+    coinText:` Gia: ${course.coin}`,
+    index: index,
+    orginArray: orginArray, //tra ve gia tri return de them dl moi
+  };
+}
+
+var newCourses = courses.map(courseHandler);
+
+console.log(newCourses);
     
+
+
 reduce()
 */
 
@@ -677,18 +695,30 @@ var courses = [
     },
 ];
 
-function courseHandler(course, index, orginArray) {
-  return {
-    id: course.id,
-    name: `Khoa hoc: ${course.name}`,
-    coin: course.coin,
-    coinText:` Gia: ${course.coin}`,
-    index: index,
-    orginArray: orginArray, //tra ve gia tri return de them dl moi
-  };
+//dùng for of để tính tổng coin
+// var totalCoin = 0;
+
+// for (var course of courses) {
+//   totalCoin += course.coin;
+// }
+
+// console.log(totalCoin);
+
+var i = 0;
+function coinHandler(accumulator, currentValue, currentIndex, orginArray) {
+  i++;
+  var total = accumulator + currentValue.coin;
+
+  console.table({
+      'Luot chay: ': i,
+      'Bien luu tru: ': accumulator,
+      'Gia khoa hoc: ': currentValue.coin,
+      'Tich tru duoc: ': total,
+  });
+
+  return total ;
 }
 
-var newCourses = courses.map(courseHandler);
+var totalCoin = courses.reduce(coinHandler, 0);// initial value
 
-console.log(newCourses);
-
+console.log(totalCoin);
