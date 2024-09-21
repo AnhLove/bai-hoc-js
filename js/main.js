@@ -660,6 +660,36 @@ console.log(newCourses);
 
 
 reduce()
+******Ly Thuyet
+var i = 0;
+function coinHandler(accumulator, currentValue, currentIndex, orginArray) {
+  i++;
+  var total = accumulator + currentValue.coin;
+
+  console.table({
+      'Luot chay: ': i,
+      'Bien luu tru: ': accumulator,
+      'Gia khoa hoc: ': currentValue.coin,
+      'Tich tru duoc: ': total,
+  });
+
+  return total ;
+}
+
+var totalCoin = courses.reduce(coinHandler, 0);// initial value
+
+console.log(totalCoin);
+********Van dung
+var i = 0;
+
+var totalcoin = courses.reduce(function(total, course) {
+  i++;
+
+  console.log(i, total, course);
+    return total + course.coin;
+}, 0);
+
+console.log(totalcoin);
 */
 
 var courses = [
@@ -704,21 +734,48 @@ var courses = [
 
 // console.log(totalCoin);
 
-var i = 0;
-function coinHandler(accumulator, currentValue, currentIndex, orginArray) {
-  i++;
-  var total = accumulator + currentValue.coin;
+//BT van dung reduce
 
-  console.table({
-      'Luot chay: ': i,
-      'Bien luu tru: ': accumulator,
-      'Gia khoa hoc: ': currentValue.coin,
-      'Tich tru duoc: ': total,
-  });
+// var dethArray = [1, 2, [3, 4], 5, 6, [7, 8, 9]];
 
-  return total ;
-}
+// var floatArray = dethArray.reduce(function(floatOutput, dethItem) {
 
-var totalCoin = courses.reduce(coinHandler, 0);// initial value
+//     return floatOutput.concat(dethItem) 
+// }, []);
 
-console.log(totalCoin);
+// console.log(floatArray);
+
+var topics = [
+  {
+    topic:"Front-End",
+    courses: [
+        {
+            id: 1,
+            title: "HTML, CSS"
+        },
+        {
+            id: 2,
+            title: "Javascript"
+        }
+    ]
+  },
+  {
+    topic: "Back-End",
+    courses: [
+        {
+            id: 3,
+            title: "PHP"
+        },
+        {
+            id: 4,
+            title: "NodeJS"
+        }
+    ]
+  },
+];
+
+var newCourses = topics.reduce(function(course, topic) {
+      return course.concat(topic.courses);
+}, []);
+
+console.log(newCourses);
